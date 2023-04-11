@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":["console","log","alert"],"mappings":"aAAAA,QAAAC,IAAA,eAAA,EAEAC,MAAA,OAAA","file":"all.js","sourcesContent":["console.log(\"Hello Armenia\");\r\n\r\nalert(\"Hello\");"]}
