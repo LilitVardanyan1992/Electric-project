@@ -1,3 +1,0 @@
-function bye (name) {
-    return ``
-}
