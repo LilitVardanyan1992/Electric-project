@@ -10,11 +10,9 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        min-height: 100px;
         
         .nav__left {
             img {
-
                 display: block;
             }
         }
@@ -25,25 +23,27 @@ header {
 
         .nav__right {
             display: flex;
-            //justify-content: space-between;
             align-items: center;
             gap: 64px;
     
             .nav__menu {
                 display: flex;
-                gap: 32px;
                 margin: 0;
 
                 li {
                     list-style-type: none;
                     
                     a {
-                        display: block;
+                        display: flex;
+                        align-items: center;
                         text-decoration: none;
                         color: #fff;
+                        min-height: 100px;
+                        padding: 0px 16px;
+                        transition: $trs;
 
                         &:hover {
-                            text-decoration: underline;
+                            background: $primary;
                         }
                     }
                 }
@@ -52,21 +52,18 @@ header {
             .nav__lang {
                 display: flex;
                 gap: 16px;
+
                 a {
                     display: block;
                     text-decoration: none;
                     color: #fff;
                 }
             }
-    
-            .nav__btn {
-                a {
-    
-                }
-            }
         }
 
         @media screen and (max-width: $mobile) {
+            min-height: 100px;
+
             .nav__mobile {
                 display: block;
             }
@@ -83,6 +80,7 @@ header {
                 gap: 32px;
                 padding: 30px;
                 transition: left 0.3px;
+                z-index: 555;
 
                 &.active__nav {
                     left: 0px;
@@ -91,17 +89,37 @@ header {
 
                 .nav__menu {
                     flex-direction: column;
-                    gap: 16px;
+                    gap: 0px;
+                    width: 100%;
+                    border-bottom: 0.5px solid #eee;
+
                     li {
                         a {
-                            color: $darttext;
+                            padding: 0px 30px;
+                            color: $darkText;
+
+                            &:hover {
+                                color: #fff;
+                            }
                         }
                     } 
                 }
 
                 .nav__lang {
+                    padding: 0px 30px;
+
                     a {
-                        color: $darttext;
+                        color: $darkText;
+                    }
+                }
+
+                .nav__btn {
+                    padding: 0px 30px;
+                    width: 100%;
+
+                    a {
+                        width: 100%;
+                        text-align: center;
                     }
                 }
             }
@@ -115,7 +133,7 @@ header {
         text-align: center;
 
         h1 {
-            font-size: min(99px, max(45px + 2vw));
+            font-size: min(99px, max(40px + 2vw));
             letter-spacing: 5px;
             color: #fff;
             font-weight: normal;

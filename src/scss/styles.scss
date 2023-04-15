@@ -1,9 +1,9 @@
 @import "./fonts.scss";
 @import "./global.scss";
-@import "./variables.scss";
+
 @import "./components/header.scss";
+@import "./components/main.scss";
 
 body {
-    font-family: "r-regular";
+	font-family: "r-regular", sans-serif;
 }
-
