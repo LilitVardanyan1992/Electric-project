@@ -11,7 +11,7 @@ import imagemin from "gulp-imagemin";
 import gcmq from "gulp-group-css-media-queries";
 import sourcemaps from "gulp-sourcemaps";
 import babel from "gulp-babel";
-import transform from "gulp-es6-module-jstransform";
+
 
 const sass = gulpSass(dartSass);
 
@@ -40,7 +40,6 @@ async function scripts() {
 	.pipe(babel({
 		presets: ["@babel/env"]
 	}))
-	.pipe(transform())
 	.pipe(uglify({
 		toplevel: true
 	}))
@@ -75,7 +74,8 @@ async function watch () {
 		server: {
 			baseDir: "./build"
 		},
-		tunnel: false
+		tunnel: false,
+		port: 5555
 	});
 
 	gulp.watch("./src/scss/**/*.scss", styles);
